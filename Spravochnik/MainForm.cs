@@ -36,7 +36,7 @@ namespace Spravochnik
 
     public partial class MainForm : Form
     {
-        Car[] cars = new Car[3];
+        Car[] cars = new Car[4];
         public MainForm()
         {
             InitializeComponent();            
@@ -44,9 +44,10 @@ namespace Spravochnik
             cars[0] = new Car("Lada Priora", "Седан", 120, 50000);
             cars[1] = new Car("Lada Granta", "Седан", 128, 70000);
             cars[2] = new Car("Lada Vesta", "Хечбэк", 138, 80000);
+            cars[3] = new Car("Lada Xray", "Униыкрсал", 158, 100000);
 
             int x = 30;
-            for(int i=0; i<3; i++)
+            for(int i=0; i<4; i++)
             {
                 cars[i].btn.Location = new Point(x, 180);
                 cars[i].btn.Size = new Size(200, 40);
