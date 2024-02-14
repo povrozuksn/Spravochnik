@@ -12,12 +12,18 @@ namespace Spravochnik
 {
     public partial class CarForm : Form
     {
-        public CarForm(string name)
+        public CarForm(Car car)
         {
             InitializeComponent();
-            Text = name;
-            label1.Text = name;
-            pictureBox1.Load("../../Pictures/" + name + ".jpg");
+            Text = car.name;
+            label1.Text = car.name;
+            pictureBox1.Load("../../Pictures/" + car.name + ".jpg");
+
+            kuzovLbl.Text = car.kuzov;
+            kppLbl.Text = car.kpp;
+            powerLbl.Text = car.power.ToString();
+            priceLbl.Text = car.price.ToString();
+
         }
     }
 }

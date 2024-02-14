@@ -38,7 +38,7 @@
             // HelpButton
             // 
             this.HelpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.HelpButton.Location = new System.Drawing.Point(1106, 3);
+            this.HelpButton.Location = new System.Drawing.Point(1149, 3);
             this.HelpButton.Name = "HelpButton";
             this.HelpButton.Size = new System.Drawing.Size(30, 30);
             this.HelpButton.TabIndex = 3;
@@ -53,7 +53,7 @@
             this.AuthPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AuthPanel.Location = new System.Drawing.Point(0, 0);
             this.AuthPanel.Name = "AuthPanel";
-            this.AuthPanel.Size = new System.Drawing.Size(1139, 56);
+            this.AuthPanel.Size = new System.Drawing.Size(1182, 56);
             this.AuthPanel.TabIndex = 4;
             // 
             // FiltrPanel
@@ -62,15 +62,16 @@
             this.FiltrPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FiltrPanel.Location = new System.Drawing.Point(0, 56);
             this.FiltrPanel.Name = "FiltrPanel";
-            this.FiltrPanel.Size = new System.Drawing.Size(1139, 59);
+            this.FiltrPanel.Size = new System.Drawing.Size(1182, 59);
             this.FiltrPanel.TabIndex = 5;
             // 
             // ViewPanel
             // 
+            this.ViewPanel.AutoScroll = true;
             this.ViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ViewPanel.Location = new System.Drawing.Point(0, 115);
             this.ViewPanel.Name = "ViewPanel";
-            this.ViewPanel.Size = new System.Drawing.Size(1139, 459);
+            this.ViewPanel.Size = new System.Drawing.Size(1182, 459);
             this.ViewPanel.TabIndex = 6;
             // 
             // MainForm
@@ -79,7 +80,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1139, 574);
+            this.ClientSize = new System.Drawing.Size(1182, 574);
             this.Controls.Add(this.ViewPanel);
             this.Controls.Add(this.FiltrPanel);
             this.Controls.Add(this.AuthPanel);
