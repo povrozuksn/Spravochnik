@@ -32,7 +32,12 @@
             this.AuthPanel = new System.Windows.Forms.Panel();
             this.FiltrPanel = new System.Windows.Forms.Panel();
             this.ViewPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NameTB = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.AuthPanel.SuspendLayout();
+            this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // HelpButton
@@ -59,20 +64,61 @@
             // FiltrPanel
             // 
             this.FiltrPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.FiltrPanel.Controls.Add(this.comboBox1);
+            this.FiltrPanel.Controls.Add(this.label2);
+            this.FiltrPanel.Controls.Add(this.NameTB);
+            this.FiltrPanel.Controls.Add(this.label1);
             this.FiltrPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FiltrPanel.Location = new System.Drawing.Point(0, 56);
             this.FiltrPanel.Name = "FiltrPanel";
-            this.FiltrPanel.Size = new System.Drawing.Size(1182, 59);
+            this.FiltrPanel.Size = new System.Drawing.Size(1182, 121);
             this.FiltrPanel.TabIndex = 5;
             // 
             // ViewPanel
             // 
             this.ViewPanel.AutoScroll = true;
             this.ViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewPanel.Location = new System.Drawing.Point(0, 115);
+            this.ViewPanel.Location = new System.Drawing.Point(0, 177);
             this.ViewPanel.Name = "ViewPanel";
-            this.ViewPanel.Size = new System.Drawing.Size(1182, 459);
+            this.ViewPanel.Size = new System.Drawing.Size(1182, 397);
             this.ViewPanel.TabIndex = 6;
+            this.ViewPanel.Resize += new System.EventHandler(this.ViewPanel_Resize);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Название";
+            // 
+            // NameTB
+            // 
+            this.NameTB.Location = new System.Drawing.Point(143, 27);
+            this.NameTB.Name = "NameTB";
+            this.NameTB.Size = new System.Drawing.Size(188, 30);
+            this.NameTB.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(38, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Тип трансмиссии";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "МКПП",
+            "АКПП"});
+            this.comboBox1.Location = new System.Drawing.Point(219, 68);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(177, 33);
+            this.comboBox1.TabIndex = 3;
             // 
             // MainForm
             // 
@@ -88,7 +134,10 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.AuthPanel.ResumeLayout(false);
+            this.FiltrPanel.ResumeLayout(false);
+            this.FiltrPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -98,6 +147,10 @@
         private System.Windows.Forms.Panel AuthPanel;
         private System.Windows.Forms.Panel FiltrPanel;
         private System.Windows.Forms.Panel ViewPanel;
+        private System.Windows.Forms.TextBox NameTB;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
