@@ -31,11 +31,19 @@
             this.HelpButton = new System.Windows.Forms.Button();
             this.AuthPanel = new System.Windows.Forms.Panel();
             this.FiltrPanel = new System.Windows.Forms.Panel();
-            this.ViewPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.NameTB = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.kppCB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.nameTB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ViewPanel = new System.Windows.Forms.Panel();
+            this.kuzovCLB = new System.Windows.Forms.CheckedListBox();
+            this.powerTB = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.priceTB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.findBTN = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -64,61 +72,147 @@
             // FiltrPanel
             // 
             this.FiltrPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.FiltrPanel.Controls.Add(this.comboBox1);
+            this.FiltrPanel.Controls.Add(this.button1);
+            this.FiltrPanel.Controls.Add(this.findBTN);
+            this.FiltrPanel.Controls.Add(this.priceTB);
+            this.FiltrPanel.Controls.Add(this.label5);
+            this.FiltrPanel.Controls.Add(this.powerTB);
+            this.FiltrPanel.Controls.Add(this.label4);
+            this.FiltrPanel.Controls.Add(this.kuzovCLB);
+            this.FiltrPanel.Controls.Add(this.label3);
+            this.FiltrPanel.Controls.Add(this.kppCB);
             this.FiltrPanel.Controls.Add(this.label2);
-            this.FiltrPanel.Controls.Add(this.NameTB);
+            this.FiltrPanel.Controls.Add(this.nameTB);
             this.FiltrPanel.Controls.Add(this.label1);
             this.FiltrPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FiltrPanel.Location = new System.Drawing.Point(0, 56);
             this.FiltrPanel.Name = "FiltrPanel";
-            this.FiltrPanel.Size = new System.Drawing.Size(1182, 121);
+            this.FiltrPanel.Size = new System.Drawing.Size(1182, 144);
             this.FiltrPanel.TabIndex = 5;
             // 
-            // ViewPanel
+            // label3
             // 
-            this.ViewPanel.AutoScroll = true;
-            this.ViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewPanel.Location = new System.Drawing.Point(0, 177);
-            this.ViewPanel.Name = "ViewPanel";
-            this.ViewPanel.Size = new System.Drawing.Size(1182, 397);
-            this.ViewPanel.TabIndex = 6;
-            this.ViewPanel.Resize += new System.EventHandler(this.ViewPanel_Resize);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(303, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Тип кузова";
             // 
-            // label1
+            // kppCB
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Название";
-            // 
-            // NameTB
-            // 
-            this.NameTB.Location = new System.Drawing.Point(143, 27);
-            this.NameTB.Name = "NameTB";
-            this.NameTB.Size = new System.Drawing.Size(188, 30);
-            this.NameTB.TabIndex = 1;
+            this.kppCB.FormattingEnabled = true;
+            this.kppCB.Items.AddRange(new object[] {
+            "",
+            "МКПП",
+            "АКПП"});
+            this.kppCB.Location = new System.Drawing.Point(186, 86);
+            this.kppCB.Name = "kppCB";
+            this.kppCB.Size = new System.Drawing.Size(177, 33);
+            this.kppCB.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 68);
+            this.label2.Location = new System.Drawing.Point(5, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Тип трансмиссии";
             // 
-            // comboBox1
+            // nameTB
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "МКПП",
-            "АКПП"});
-            this.comboBox1.Location = new System.Drawing.Point(219, 68);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 33);
-            this.comboBox1.TabIndex = 3;
+            this.nameTB.Location = new System.Drawing.Point(110, 45);
+            this.nameTB.Name = "nameTB";
+            this.nameTB.Size = new System.Drawing.Size(188, 30);
+            this.nameTB.TabIndex = 1;
+            this.nameTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nameTB_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Название";
+            // 
+            // ViewPanel
+            // 
+            this.ViewPanel.AutoScroll = true;
+            this.ViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewPanel.Location = new System.Drawing.Point(0, 200);
+            this.ViewPanel.Name = "ViewPanel";
+            this.ViewPanel.Size = new System.Drawing.Size(1182, 374);
+            this.ViewPanel.TabIndex = 6;
+            this.ViewPanel.Resize += new System.EventHandler(this.ViewPanel_Resize);
+            // 
+            // kuzovCLB
+            // 
+            this.kuzovCLB.FormattingEnabled = true;
+            this.kuzovCLB.Items.AddRange(new object[] {
+            "Седан",
+            "Хечбэк",
+            "Универсал",
+            "Фургон"});
+            this.kuzovCLB.Location = new System.Drawing.Point(423, 34);
+            this.kuzovCLB.Name = "kuzovCLB";
+            this.kuzovCLB.Size = new System.Drawing.Size(142, 104);
+            this.kuzovCLB.TabIndex = 5;
+            // 
+            // powerTB
+            // 
+            this.powerTB.Location = new System.Drawing.Point(851, 44);
+            this.powerTB.Name = "powerTB";
+            this.powerTB.Size = new System.Drawing.Size(188, 30);
+            this.powerTB.TabIndex = 7;
+            this.powerTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.powerTB_KeyDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(571, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(287, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Мощность двигателя, л.с., от";
+            // 
+            // priceTB
+            // 
+            this.priceTB.Location = new System.Drawing.Point(775, 83);
+            this.priceTB.Name = "priceTB";
+            this.priceTB.Size = new System.Drawing.Size(188, 30);
+            this.priceTB.TabIndex = 9;
+            this.priceTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.priceTB_KeyDown);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(571, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(198, 25);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Стоимость, руб., от";
+            // 
+            // findBTN
+            // 
+            this.findBTN.Location = new System.Drawing.Point(1069, 47);
+            this.findBTN.Name = "findBTN";
+            this.findBTN.Size = new System.Drawing.Size(97, 64);
+            this.findBTN.TabIndex = 10;
+            this.findBTN.Text = "Найти";
+            this.findBTN.UseVisualStyleBackColor = true;
+            this.findBTN.Click += new System.EventHandler(this.findBTN_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 33);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Свернуть";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -147,10 +241,18 @@
         private System.Windows.Forms.Panel AuthPanel;
         private System.Windows.Forms.Panel FiltrPanel;
         private System.Windows.Forms.Panel ViewPanel;
-        private System.Windows.Forms.TextBox NameTB;
+        private System.Windows.Forms.TextBox nameTB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox kppCB;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckedListBox kuzovCLB;
+        private System.Windows.Forms.Button findBTN;
+        private System.Windows.Forms.TextBox priceTB;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox powerTB;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
 

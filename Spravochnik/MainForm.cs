@@ -55,11 +55,6 @@ namespace Spravochnik
                 cars.Add(car);
             }
 
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
             int x = 30;
             int y = 30;
             for (int i = 0; i < cars.Count; i++)
@@ -82,6 +77,11 @@ namespace Spravochnik
                     x = 30;
                 }
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void HelpButton_Click(object sender, EventArgs e)
@@ -107,5 +107,97 @@ namespace Spravochnik
             MainForm_Load(null, null);
         }
 
+        private void findBTN_Click(object sender, EventArgs e)
+        {
+            int x = 30;
+            int y = 30;
+            for (int i = 0; i < cars.Count; i++)
+            {
+                cars[i].btn.Visible = true;
+                cars[i].pb.Visible = true;
+
+                if(nameTB.Text != "" && !cars[i].name.Contains(nameTB.Text))
+                {
+                    cars[i].btn.Visible = false;
+                    cars[i].pb.Visible = false;
+                }
+
+                if(kppCB.Text != "" && kppCB.Text != cars[i].kpp)
+                {
+                    cars[i].btn.Visible = false;
+                    cars[i].pb.Visible = false;
+                }
+
+                if (kuzovCLB.CheckedItems.Count > 0 && !kuzovCLB.CheckedItems.Contains(cars[i].kuzov))
+                {
+                    cars[i].btn.Visible = false;
+                    cars[i].pb.Visible = false;
+                }
+
+                if (powerTB.Text != "" && Convert.ToInt32(powerTB.Text) > cars[i].power)
+                {
+                    cars[i].btn.Visible = false;
+                    cars[i].pb.Visible = false;
+                }
+
+                if (priceTB.Text != "" && Convert.ToInt32(priceTB.Text) > cars[i].price)
+                {
+                    cars[i].btn.Visible = false;
+                    cars[i].pb.Visible = false;
+                }
+
+                if (cars[i].pb.Visible)
+                {
+                    cars[i].btn.Location = new Point(x, y+150);
+                    cars[i].pb.Location = new Point(x, y);
+
+                    x += 230;
+                    if (x >= ViewPanel.Width - 200)
+                    {
+                        y += 200;
+                        x = 30;
+                    }
+                } 
+            }
+        }
+
+        private void nameTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                findBTN_Click(null, null);
+            }
+        }
+
+        private void powerTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                findBTN_Click(null, null);
+            }
+
+        }
+
+        private void priceTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                findBTN_Click(null, null);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(FiltrPanel.Height > button1.Size.Height)
+            {
+                FiltrPanel.Height = button1.Size.Height;
+                button1.Text = "Развернуть";
+            }
+            else
+            {
+                FiltrPanel.Height = 145;
+                button1.Text = "Свернуть";
+            }
+        }
     }
 }
