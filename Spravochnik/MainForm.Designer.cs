@@ -31,19 +31,21 @@
             this.HelpButton = new System.Windows.Forms.Button();
             this.AuthPanel = new System.Windows.Forms.Panel();
             this.FiltrPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.findBTN = new System.Windows.Forms.Button();
+            this.priceTB = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.powerTB = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.kuzovCLB = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.kppCB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.nameTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ViewPanel = new System.Windows.Forms.Panel();
-            this.kuzovCLB = new System.Windows.Forms.CheckedListBox();
-            this.powerTB = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.priceTB = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.findBTN = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AuthButton = new System.Windows.Forms.Button();
+            this.HelloLabel = new System.Windows.Forms.Label();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +64,8 @@
             // AuthPanel
             // 
             this.AuthPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AuthPanel.Controls.Add(this.HelloLabel);
+            this.AuthPanel.Controls.Add(this.AuthButton);
             this.AuthPanel.Controls.Add(this.HelpButton);
             this.AuthPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AuthPanel.Location = new System.Drawing.Point(0, 0);
@@ -89,6 +93,73 @@
             this.FiltrPanel.Name = "FiltrPanel";
             this.FiltrPanel.Size = new System.Drawing.Size(1182, 144);
             this.FiltrPanel.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 33);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Свернуть";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // findBTN
+            // 
+            this.findBTN.Location = new System.Drawing.Point(1069, 47);
+            this.findBTN.Name = "findBTN";
+            this.findBTN.Size = new System.Drawing.Size(97, 64);
+            this.findBTN.TabIndex = 10;
+            this.findBTN.Text = "Найти";
+            this.findBTN.UseVisualStyleBackColor = true;
+            this.findBTN.Click += new System.EventHandler(this.findBTN_Click);
+            // 
+            // priceTB
+            // 
+            this.priceTB.Location = new System.Drawing.Point(775, 83);
+            this.priceTB.Name = "priceTB";
+            this.priceTB.Size = new System.Drawing.Size(188, 30);
+            this.priceTB.TabIndex = 9;
+            this.priceTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.priceTB_KeyDown);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(571, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(198, 25);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Стоимость, руб., от";
+            // 
+            // powerTB
+            // 
+            this.powerTB.Location = new System.Drawing.Point(851, 44);
+            this.powerTB.Name = "powerTB";
+            this.powerTB.Size = new System.Drawing.Size(188, 30);
+            this.powerTB.TabIndex = 7;
+            this.powerTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.powerTB_KeyDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(571, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(287, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Мощность двигателя, л.с., от";
+            // 
+            // kuzovCLB
+            // 
+            this.kuzovCLB.FormattingEnabled = true;
+            this.kuzovCLB.Items.AddRange(new object[] {
+            "Седан",
+            "Хечбэк",
+            "Универсал",
+            "Фургон"});
+            this.kuzovCLB.Location = new System.Drawing.Point(423, 34);
+            this.kuzovCLB.Name = "kuzovCLB";
+            this.kuzovCLB.Size = new System.Drawing.Size(142, 104);
+            this.kuzovCLB.TabIndex = 5;
             // 
             // label3
             // 
@@ -147,72 +218,24 @@
             this.ViewPanel.TabIndex = 6;
             this.ViewPanel.Resize += new System.EventHandler(this.ViewPanel_Resize);
             // 
-            // kuzovCLB
+            // AuthButton
             // 
-            this.kuzovCLB.FormattingEnabled = true;
-            this.kuzovCLB.Items.AddRange(new object[] {
-            "Седан",
-            "Хечбэк",
-            "Универсал",
-            "Фургон"});
-            this.kuzovCLB.Location = new System.Drawing.Point(423, 34);
-            this.kuzovCLB.Name = "kuzovCLB";
-            this.kuzovCLB.Size = new System.Drawing.Size(142, 104);
-            this.kuzovCLB.TabIndex = 5;
+            this.AuthButton.Location = new System.Drawing.Point(12, 12);
+            this.AuthButton.Name = "AuthButton";
+            this.AuthButton.Size = new System.Drawing.Size(127, 35);
+            this.AuthButton.TabIndex = 4;
+            this.AuthButton.Text = "Войти";
+            this.AuthButton.UseVisualStyleBackColor = true;
+            this.AuthButton.Click += new System.EventHandler(this.AuthButton_Click);
             // 
-            // powerTB
+            // HelloLabel
             // 
-            this.powerTB.Location = new System.Drawing.Point(851, 44);
-            this.powerTB.Name = "powerTB";
-            this.powerTB.Size = new System.Drawing.Size(188, 30);
-            this.powerTB.TabIndex = 7;
-            this.powerTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.powerTB_KeyDown);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(571, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(287, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Мощность двигателя, л.с., от";
-            // 
-            // priceTB
-            // 
-            this.priceTB.Location = new System.Drawing.Point(775, 83);
-            this.priceTB.Name = "priceTB";
-            this.priceTB.Size = new System.Drawing.Size(188, 30);
-            this.priceTB.TabIndex = 9;
-            this.priceTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.priceTB_KeyDown);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(571, 86);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 25);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Стоимость, руб., от";
-            // 
-            // findBTN
-            // 
-            this.findBTN.Location = new System.Drawing.Point(1069, 47);
-            this.findBTN.Name = "findBTN";
-            this.findBTN.Size = new System.Drawing.Size(97, 64);
-            this.findBTN.TabIndex = 10;
-            this.findBTN.Text = "Найти";
-            this.findBTN.UseVisualStyleBackColor = true;
-            this.findBTN.Click += new System.EventHandler(this.findBTN_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 33);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Свернуть";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.HelloLabel.AutoSize = true;
+            this.HelloLabel.Location = new System.Drawing.Point(145, 17);
+            this.HelloLabel.Name = "HelloLabel";
+            this.HelloLabel.Size = new System.Drawing.Size(64, 25);
+            this.HelloLabel.TabIndex = 5;
+            this.HelloLabel.Text = "label6";
             // 
             // MainForm
             // 
@@ -230,6 +253,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.AuthPanel.ResumeLayout(false);
+            this.AuthPanel.PerformLayout();
             this.FiltrPanel.ResumeLayout(false);
             this.FiltrPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -253,6 +277,8 @@
         private System.Windows.Forms.TextBox powerTB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AuthButton;
+        private System.Windows.Forms.Label HelloLabel;
     }
 }
 

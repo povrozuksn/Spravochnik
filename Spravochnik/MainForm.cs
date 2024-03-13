@@ -45,6 +45,7 @@ namespace Spravochnik
         {
             InitializeComponent();            
             Text = "Справочник по автомобилям";
+            HelloLabel.Visible = false;
 
             string[] strs = File.ReadAllLines("cars.txt");
 
@@ -197,6 +198,33 @@ namespace Spravochnik
             {
                 FiltrPanel.Height = 145;
                 button1.Text = "Свернуть";
+            }
+        }
+
+        private void AuthButton_Click(object sender, EventArgs e)
+        {
+            if (AuthForm.name == "")
+            {
+                AuthForm authForm = new AuthForm();
+                authForm.ShowDialog();
+            }
+            else
+            {
+                AuthForm.name = "";
+            }
+
+            if (AuthForm.name == "")
+            {
+                HelloLabel.Visible = false;
+                HelloLabel.Text = "";
+                AuthForm.name = "";
+                AuthButton.Text = "Войти";
+            }
+            else
+            {
+                HelloLabel.Visible = true;
+                HelloLabel.Text = "Вы авторизовались как " + AuthForm.name + " " + AuthForm.family;
+                AuthButton.Text = "Выйти";
             }
         }
     }
