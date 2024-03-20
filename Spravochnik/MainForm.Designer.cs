@@ -30,6 +30,8 @@
         {
             this.HelpButton = new System.Windows.Forms.Button();
             this.AuthPanel = new System.Windows.Forms.Panel();
+            this.HelloLabel = new System.Windows.Forms.Label();
+            this.AuthButton = new System.Windows.Forms.Button();
             this.FiltrPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.findBTN = new System.Windows.Forms.Button();
@@ -44,8 +46,7 @@
             this.nameTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ViewPanel = new System.Windows.Forms.Panel();
-            this.AuthButton = new System.Windows.Forms.Button();
-            this.HelloLabel = new System.Windows.Forms.Label();
+            this.RegButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             // HelpButton
             // 
             this.HelpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.HelpButton.Location = new System.Drawing.Point(1149, 3);
+            this.HelpButton.Location = new System.Drawing.Point(1140, 14);
             this.HelpButton.Name = "HelpButton";
             this.HelpButton.Size = new System.Drawing.Size(30, 30);
             this.HelpButton.TabIndex = 3;
@@ -64,6 +65,7 @@
             // AuthPanel
             // 
             this.AuthPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AuthPanel.Controls.Add(this.RegButton);
             this.AuthPanel.Controls.Add(this.HelloLabel);
             this.AuthPanel.Controls.Add(this.AuthButton);
             this.AuthPanel.Controls.Add(this.HelpButton);
@@ -72,6 +74,25 @@
             this.AuthPanel.Name = "AuthPanel";
             this.AuthPanel.Size = new System.Drawing.Size(1182, 56);
             this.AuthPanel.TabIndex = 4;
+            // 
+            // HelloLabel
+            // 
+            this.HelloLabel.AutoSize = true;
+            this.HelloLabel.Location = new System.Drawing.Point(145, 17);
+            this.HelloLabel.Name = "HelloLabel";
+            this.HelloLabel.Size = new System.Drawing.Size(64, 25);
+            this.HelloLabel.TabIndex = 5;
+            this.HelloLabel.Text = "label6";
+            // 
+            // AuthButton
+            // 
+            this.AuthButton.Location = new System.Drawing.Point(12, 12);
+            this.AuthButton.Name = "AuthButton";
+            this.AuthButton.Size = new System.Drawing.Size(127, 35);
+            this.AuthButton.TabIndex = 4;
+            this.AuthButton.Text = "Войти";
+            this.AuthButton.UseVisualStyleBackColor = true;
+            this.AuthButton.Click += new System.EventHandler(this.AuthButton_Click);
             // 
             // FiltrPanel
             // 
@@ -218,24 +239,15 @@
             this.ViewPanel.TabIndex = 6;
             this.ViewPanel.Resize += new System.EventHandler(this.ViewPanel_Resize);
             // 
-            // AuthButton
+            // RegButton
             // 
-            this.AuthButton.Location = new System.Drawing.Point(12, 12);
-            this.AuthButton.Name = "AuthButton";
-            this.AuthButton.Size = new System.Drawing.Size(127, 35);
-            this.AuthButton.TabIndex = 4;
-            this.AuthButton.Text = "Войти";
-            this.AuthButton.UseVisualStyleBackColor = true;
-            this.AuthButton.Click += new System.EventHandler(this.AuthButton_Click);
-            // 
-            // HelloLabel
-            // 
-            this.HelloLabel.AutoSize = true;
-            this.HelloLabel.Location = new System.Drawing.Point(145, 17);
-            this.HelloLabel.Name = "HelloLabel";
-            this.HelloLabel.Size = new System.Drawing.Size(64, 25);
-            this.HelloLabel.TabIndex = 5;
-            this.HelloLabel.Text = "label6";
+            this.RegButton.Location = new System.Drawing.Point(980, 12);
+            this.RegButton.Name = "RegButton";
+            this.RegButton.Size = new System.Drawing.Size(154, 34);
+            this.RegButton.TabIndex = 6;
+            this.RegButton.Text = "Регистрация";
+            this.RegButton.UseVisualStyleBackColor = true;
+            this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
             // 
             // MainForm
             // 
@@ -279,6 +291,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button AuthButton;
         private System.Windows.Forms.Label HelloLabel;
+        private System.Windows.Forms.Button RegButton;
     }
 }
 

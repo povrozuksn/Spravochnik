@@ -15,6 +15,7 @@ namespace Spravochnik
     {
         public static string name = "";
         public static string family = "";
+        public static bool isAdmin;
 
 
         public AuthForm()
@@ -34,6 +35,7 @@ namespace Spravochnik
                 {
                     name = parts[0];
                     family = parts[1];
+                    isAdmin = Convert.ToBoolean(Convert.ToInt32(parts[4]));
                     Close();
                     return;
                 }

@@ -219,13 +219,21 @@ namespace Spravochnik
                 HelloLabel.Text = "";
                 AuthForm.name = "";
                 AuthButton.Text = "Войти";
+                RegButton.Visible = true;
             }
             else
             {
                 HelloLabel.Visible = true;
                 HelloLabel.Text = "Вы авторизовались как " + AuthForm.name + " " + AuthForm.family;
                 AuthButton.Text = "Выйти";
+                RegButton.Visible = false;
             }
+        }
+
+        private void RegButton_Click(object sender, EventArgs e)
+        {
+            RegForm reg = new RegForm();
+            reg.ShowDialog();
         }
     }
 }
