@@ -30,6 +30,7 @@
         {
             this.HelpButton = new System.Windows.Forms.Button();
             this.AuthPanel = new System.Windows.Forms.Panel();
+            this.RegButton = new System.Windows.Forms.Button();
             this.HelloLabel = new System.Windows.Forms.Label();
             this.AuthButton = new System.Windows.Forms.Button();
             this.FiltrPanel = new System.Windows.Forms.Panel();
@@ -46,7 +47,7 @@
             this.nameTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ViewPanel = new System.Windows.Forms.Panel();
-            this.RegButton = new System.Windows.Forms.Button();
+            this.AddCarButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +66,7 @@
             // AuthPanel
             // 
             this.AuthPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AuthPanel.Controls.Add(this.AddCarButton);
             this.AuthPanel.Controls.Add(this.RegButton);
             this.AuthPanel.Controls.Add(this.HelloLabel);
             this.AuthPanel.Controls.Add(this.AuthButton);
@@ -74,6 +76,16 @@
             this.AuthPanel.Name = "AuthPanel";
             this.AuthPanel.Size = new System.Drawing.Size(1182, 56);
             this.AuthPanel.TabIndex = 4;
+            // 
+            // RegButton
+            // 
+            this.RegButton.Location = new System.Drawing.Point(980, 12);
+            this.RegButton.Name = "RegButton";
+            this.RegButton.Size = new System.Drawing.Size(154, 34);
+            this.RegButton.TabIndex = 6;
+            this.RegButton.Text = "Регистрация";
+            this.RegButton.UseVisualStyleBackColor = true;
+            this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
             // 
             // HelloLabel
             // 
@@ -239,15 +251,15 @@
             this.ViewPanel.TabIndex = 6;
             this.ViewPanel.Resize += new System.EventHandler(this.ViewPanel_Resize);
             // 
-            // RegButton
+            // AddCarButton
             // 
-            this.RegButton.Location = new System.Drawing.Point(980, 12);
-            this.RegButton.Name = "RegButton";
-            this.RegButton.Size = new System.Drawing.Size(154, 34);
-            this.RegButton.TabIndex = 6;
-            this.RegButton.Text = "Регистрация";
-            this.RegButton.UseVisualStyleBackColor = true;
-            this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
+            this.AddCarButton.Location = new System.Drawing.Point(533, 10);
+            this.AddCarButton.Name = "AddCarButton";
+            this.AddCarButton.Size = new System.Drawing.Size(195, 38);
+            this.AddCarButton.TabIndex = 7;
+            this.AddCarButton.Text = "Добавить машину";
+            this.AddCarButton.UseVisualStyleBackColor = true;
+            this.AddCarButton.Click += new System.EventHandler(this.AddCarButton_Click);
             // 
             // MainForm
             // 
@@ -292,6 +304,7 @@
         private System.Windows.Forms.Button AuthButton;
         private System.Windows.Forms.Label HelloLabel;
         private System.Windows.Forms.Button RegButton;
+        private System.Windows.Forms.Button AddCarButton;
     }
 }
 

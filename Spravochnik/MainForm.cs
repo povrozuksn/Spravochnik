@@ -33,7 +33,12 @@ namespace Spravochnik
             btn.Text = name;
 
             pb = new PictureBox();
-            pb.Load("../../Pictures/" + name + ".jpg");
+
+            try
+            {
+                pb.Load("../../Pictures/" + name + ".jpg");
+            }
+            catch (Exception) { }
         }
     }
 
@@ -46,16 +51,22 @@ namespace Spravochnik
             InitializeComponent();            
             Text = "Справочник по автомобилям";
             HelloLabel.Visible = false;
+            AddCarButton.Visible = false;
 
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            cars.Clear();
             string[] strs = File.ReadAllLines("cars.txt");
-
             foreach (string str in strs)
             {
-                string[] parts = str.Split(new string[] {", "}, StringSplitOptions.None);
+                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
                 Car car = new Car(parts[0], parts[1], parts[2], Convert.ToInt32(parts[3]), Convert.ToInt32(parts[4]));
                 cars.Add(car);
             }
 
+            ViewPanel.Controls.Clear();
             int x = 30;
             int y = 30;
             for (int i = 0; i < cars.Count; i++)
@@ -78,11 +89,6 @@ namespace Spravochnik
                     x = 30;
                 }
             }
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void HelpButton_Click(object sender, EventArgs e)
@@ -220,6 +226,8 @@ namespace Spravochnik
                 AuthForm.name = "";
                 AuthButton.Text = "Войти";
                 RegButton.Visible = true;
+                AuthForm.isAdmin = false;
+                AddCarButton.Visible = AuthForm.isAdmin;
             }
             else
             {
@@ -227,6 +235,7 @@ namespace Spravochnik
                 HelloLabel.Text = "Вы авторизовались как " + AuthForm.name + " " + AuthForm.family;
                 AuthButton.Text = "Выйти";
                 RegButton.Visible = false;
+                AddCarButton.Visible = AuthForm.isAdmin;
             }
         }
 
@@ -234,6 +243,13 @@ namespace Spravochnik
         {
             RegForm reg = new RegForm();
             reg.ShowDialog();
+        }
+
+        private void AddCarButton_Click(object sender, EventArgs e)
+        {
+            AddCarForm addCar = new AddCarForm();
+            addCar.ShowDialog();
+            MainForm_Load(null, null);
         }
     }
 }

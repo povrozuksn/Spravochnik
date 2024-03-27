@@ -17,7 +17,11 @@ namespace Spravochnik
             InitializeComponent();
             Text = car.name;
             label1.Text = car.name;
-            pictureBox1.Load("../../Pictures/" + car.name + ".jpg");
+            try
+            {
+                pictureBox1.Load("../../Pictures/" + car.name + ".jpg");
+            }
+            catch (Exception) { }
 
             kuzovLbl.Text = car.kuzov;
             kppLbl.Text = car.kpp;
