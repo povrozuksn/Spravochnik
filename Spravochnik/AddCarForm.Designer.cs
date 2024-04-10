@@ -40,6 +40,11 @@
             this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SearchPictureButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.descriptionsTextBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -156,17 +161,54 @@
             this.SaveButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.SaveButton.Location = new System.Drawing.Point(0, 495);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(374, 41);
+            this.SaveButton.Size = new System.Drawing.Size(1036, 41);
             this.SaveButton.TabIndex = 11;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(358, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(291, 225);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // SearchPictureButton
+            // 
+            this.SearchPictureButton.Location = new System.Drawing.Point(358, 318);
+            this.SearchPictureButton.Name = "SearchPictureButton";
+            this.SearchPictureButton.Size = new System.Drawing.Size(291, 41);
+            this.SearchPictureButton.TabIndex = 13;
+            this.SearchPictureButton.Text = "Выберите картинку";
+            this.SearchPictureButton.UseVisualStyleBackColor = true;
+            this.SearchPictureButton.Click += new System.EventHandler(this.SearchPictureButton_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // descriptionsTextBox
+            // 
+            this.descriptionsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionsTextBox.Location = new System.Drawing.Point(677, 76);
+            this.descriptionsTextBox.Multiline = true;
+            this.descriptionsTextBox.Name = "descriptionsTextBox";
+            this.descriptionsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.descriptionsTextBox.Size = new System.Drawing.Size(339, 351);
+            this.descriptionsTextBox.TabIndex = 14;
+            // 
             // AddCarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 536);
+            this.ClientSize = new System.Drawing.Size(1036, 536);
+            this.Controls.Add(this.descriptionsTextBox);
+            this.Controls.Add(this.SearchPictureButton);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.PriceTextBox);
             this.Controls.Add(this.label6);
@@ -183,6 +225,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AddCarForm";
             this.Text = "AddCarForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +245,9 @@
         private System.Windows.Forms.TextBox PriceTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button SearchPictureButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox descriptionsTextBox;
     }
 }

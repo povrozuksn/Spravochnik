@@ -139,6 +139,7 @@
             // 
             this.PasTextBox.Location = new System.Drawing.Point(12, 313);
             this.PasTextBox.Name = "PasTextBox";
+            this.PasTextBox.PasswordChar = '*';
             this.PasTextBox.Size = new System.Drawing.Size(304, 30);
             this.PasTextBox.TabIndex = 10;
             // 
@@ -146,6 +147,7 @@
             // 
             this.RePasTextBox.Location = new System.Drawing.Point(12, 392);
             this.RePasTextBox.Name = "RePasTextBox";
+            this.RePasTextBox.PasswordChar = '*';
             this.RePasTextBox.Size = new System.Drawing.Size(304, 30);
             this.RePasTextBox.TabIndex = 11;
             // 

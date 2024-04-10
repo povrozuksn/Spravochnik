@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,6 +29,11 @@ namespace Spravochnik
             powerLbl.Text = car.power.ToString();
             priceLbl.Text = car.price.ToString();
 
+            try
+            {
+                descriptionTextBox.Text = File.ReadAllText("../../Pictures/" + car.name + ".txt");
+            }
+            catch (Exception) { }
         }
     }
 }
