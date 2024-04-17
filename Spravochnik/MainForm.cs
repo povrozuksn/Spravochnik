@@ -44,7 +44,7 @@ namespace Spravochnik
 
     public partial class MainForm : Form
     {
-        List<Car> cars = new List<Car>();
+        public static List<Car> cars = new List<Car>();
 
         public MainForm()
         {
@@ -52,6 +52,7 @@ namespace Spravochnik
             Text = "Справочник по автомобилям";
             HelloLabel.Visible = false;
             AddCarButton.Visible = false;
+            DelCarButton.Visible = false;
 
         }
 
@@ -228,6 +229,7 @@ namespace Spravochnik
                 RegButton.Visible = true;
                 AuthForm.isAdmin = false;
                 AddCarButton.Visible = AuthForm.isAdmin;
+                DelCarButton.Visible = AuthForm.isAdmin;
             }
             else
             {
@@ -236,6 +238,7 @@ namespace Spravochnik
                 AuthButton.Text = "Выйти";
                 RegButton.Visible = false;
                 AddCarButton.Visible = AuthForm.isAdmin;
+                DelCarButton.Visible = AuthForm.isAdmin;
             }
         }
 
@@ -250,6 +253,14 @@ namespace Spravochnik
             AddCarForm addCar = new AddCarForm();
             addCar.ShowDialog();
             MainForm_Load(null, null);
+        }
+
+        private void DelCarButton_Click(object sender, EventArgs e)
+        {
+            DelCarForm delCar = new DelCarForm();
+            delCar.ShowDialog();
+            MainForm_Load(null, null);
+
         }
     }
 }
