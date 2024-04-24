@@ -30,6 +30,7 @@
         {
             this.HelpButton = new System.Windows.Forms.Button();
             this.AuthPanel = new System.Windows.Forms.Panel();
+            this.DelCarButton = new System.Windows.Forms.Button();
             this.AddCarButton = new System.Windows.Forms.Button();
             this.RegButton = new System.Windows.Forms.Button();
             this.HelloLabel = new System.Windows.Forms.Label();
@@ -48,7 +49,7 @@
             this.nameTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ViewPanel = new System.Windows.Forms.Panel();
-            this.DelCarButton = new System.Windows.Forms.Button();
+            this.CompareButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             // AuthPanel
             // 
             this.AuthPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AuthPanel.Controls.Add(this.CompareButton);
             this.AuthPanel.Controls.Add(this.DelCarButton);
             this.AuthPanel.Controls.Add(this.AddCarButton);
             this.AuthPanel.Controls.Add(this.RegButton);
@@ -78,6 +80,16 @@
             this.AuthPanel.Name = "AuthPanel";
             this.AuthPanel.Size = new System.Drawing.Size(1182, 56);
             this.AuthPanel.TabIndex = 4;
+            // 
+            // DelCarButton
+            // 
+            this.DelCarButton.Location = new System.Drawing.Point(734, 10);
+            this.DelCarButton.Name = "DelCarButton";
+            this.DelCarButton.Size = new System.Drawing.Size(195, 38);
+            this.DelCarButton.TabIndex = 8;
+            this.DelCarButton.Text = "Удалить машину";
+            this.DelCarButton.UseVisualStyleBackColor = true;
+            this.DelCarButton.Click += new System.EventHandler(this.DelCarButton_Click);
             // 
             // AddCarButton
             // 
@@ -263,15 +275,15 @@
             this.ViewPanel.TabIndex = 6;
             this.ViewPanel.Resize += new System.EventHandler(this.ViewPanel_Resize);
             // 
-            // DelCarButton
+            // CompareButton
             // 
-            this.DelCarButton.Location = new System.Drawing.Point(734, 10);
-            this.DelCarButton.Name = "DelCarButton";
-            this.DelCarButton.Size = new System.Drawing.Size(195, 38);
-            this.DelCarButton.TabIndex = 8;
-            this.DelCarButton.Text = "Удалить машину";
-            this.DelCarButton.UseVisualStyleBackColor = true;
-            this.DelCarButton.Click += new System.EventHandler(this.DelCarButton_Click);
+            this.CompareButton.Location = new System.Drawing.Point(800, 12);
+            this.CompareButton.Name = "CompareButton";
+            this.CompareButton.Size = new System.Drawing.Size(174, 34);
+            this.CompareButton.TabIndex = 9;
+            this.CompareButton.Text = "К сравнению";
+            this.CompareButton.UseVisualStyleBackColor = true;
+            this.CompareButton.Click += new System.EventHandler(this.CompareButton_Click);
             // 
             // MainForm
             // 
@@ -318,6 +330,7 @@
         private System.Windows.Forms.Button RegButton;
         private System.Windows.Forms.Button AddCarButton;
         private System.Windows.Forms.Button DelCarButton;
+        private System.Windows.Forms.Button CompareButton;
     }
 }
 

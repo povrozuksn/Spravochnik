@@ -262,5 +262,11 @@ namespace Spravochnik
             MainForm_Load(null, null);
 
         }
+
+        private void CompareButton_Click(object sender, EventArgs e)
+        {
+            CompareForm compare = new CompareForm();
+            compare.ShowDialog();
+        }
     }
 }

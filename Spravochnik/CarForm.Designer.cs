@@ -40,6 +40,7 @@
             this.kppLbl = new System.Windows.Forms.Label();
             this.kuzovLbl = new System.Windows.Forms.Label();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.CompareButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -169,11 +170,23 @@
             this.descriptionTextBox.Size = new System.Drawing.Size(333, 245);
             this.descriptionTextBox.TabIndex = 7;
             // 
+            // CompareButton
+            // 
+            this.CompareButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.CompareButton.Location = new System.Drawing.Point(995, 11);
+            this.CompareButton.Name = "CompareButton";
+            this.CompareButton.Size = new System.Drawing.Size(163, 37);
+            this.CompareButton.TabIndex = 8;
+            this.CompareButton.Text = "Сравнить";
+            this.CompareButton.UseVisualStyleBackColor = false;
+            this.CompareButton.Click += new System.EventHandler(this.CompareButton_Click);
+            // 
             // CarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 334);
+            this.Controls.Add(this.CompareButton);
             this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
@@ -204,5 +217,6 @@
         private System.Windows.Forms.Label kppLbl;
         private System.Windows.Forms.Label kuzovLbl;
         private System.Windows.Forms.TextBox descriptionTextBox;
+        private System.Windows.Forms.Button CompareButton;
     }
 }

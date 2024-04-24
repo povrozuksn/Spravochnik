@@ -13,9 +13,13 @@ namespace Spravochnik
 {
     public partial class CarForm : Form
     {
-        public CarForm(Car car)
+        Car car;
+        public CarForm(Car _car)
         {
             InitializeComponent();
+
+            car = _car;
+
             Text = car.name;
             label1.Text = car.name;
             try
@@ -34,6 +38,11 @@ namespace Spravochnik
                 descriptionTextBox.Text = File.ReadAllText("../../Pictures/" + car.name + ".txt");
             }
             catch (Exception) { }
+        }
+
+        private void CompareButton_Click(object sender, EventArgs e)
+        {
+            CompareForm.myCars_list.Add(car);
         }
     }
 }
