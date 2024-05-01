@@ -42,7 +42,14 @@ namespace Spravochnik
 
         private void CompareButton_Click(object sender, EventArgs e)
         {
-            CompareForm.myCars_list.Add(car);
+            if(CompareForm.myCars_list.ContainsKey(car))
+            {
+                CompareForm.myCars_list[car]++;
+            }
+            else
+            {
+                CompareForm.myCars_list.Add(car, 1);
+            }
         }
     }
 }
