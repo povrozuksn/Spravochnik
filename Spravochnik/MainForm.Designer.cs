@@ -30,6 +30,7 @@
         {
             this.HelpButton = new System.Windows.Forms.Button();
             this.AuthPanel = new System.Windows.Forms.Panel();
+            this.CompareButton = new System.Windows.Forms.Button();
             this.DelCarButton = new System.Windows.Forms.Button();
             this.AddCarButton = new System.Windows.Forms.Button();
             this.RegButton = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             this.nameTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ViewPanel = new System.Windows.Forms.Panel();
-            this.CompareButton = new System.Windows.Forms.Button();
+            this.FeedbackButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FiltrPanel.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +69,7 @@
             // AuthPanel
             // 
             this.AuthPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AuthPanel.Controls.Add(this.FeedbackButton);
             this.AuthPanel.Controls.Add(this.CompareButton);
             this.AuthPanel.Controls.Add(this.DelCarButton);
             this.AuthPanel.Controls.Add(this.AddCarButton);
@@ -81,11 +83,23 @@
             this.AuthPanel.Size = new System.Drawing.Size(1182, 56);
             this.AuthPanel.TabIndex = 4;
             // 
+            // CompareButton
+            // 
+            this.CompareButton.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CompareButton.Location = new System.Drawing.Point(821, 12);
+            this.CompareButton.Name = "CompareButton";
+            this.CompareButton.Size = new System.Drawing.Size(111, 38);
+            this.CompareButton.TabIndex = 9;
+            this.CompareButton.Text = "К сравнению";
+            this.CompareButton.UseVisualStyleBackColor = true;
+            this.CompareButton.Click += new System.EventHandler(this.CompareButton_Click);
+            // 
             // DelCarButton
             // 
-            this.DelCarButton.Location = new System.Drawing.Point(734, 10);
+            this.DelCarButton.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DelCarButton.Location = new System.Drawing.Point(656, 12);
             this.DelCarButton.Name = "DelCarButton";
-            this.DelCarButton.Size = new System.Drawing.Size(195, 38);
+            this.DelCarButton.Size = new System.Drawing.Size(159, 38);
             this.DelCarButton.TabIndex = 8;
             this.DelCarButton.Text = "Удалить машину";
             this.DelCarButton.UseVisualStyleBackColor = true;
@@ -93,9 +107,10 @@
             // 
             // AddCarButton
             // 
-            this.AddCarButton.Location = new System.Drawing.Point(533, 10);
+            this.AddCarButton.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddCarButton.Location = new System.Drawing.Point(501, 12);
             this.AddCarButton.Name = "AddCarButton";
-            this.AddCarButton.Size = new System.Drawing.Size(195, 38);
+            this.AddCarButton.Size = new System.Drawing.Size(149, 38);
             this.AddCarButton.TabIndex = 7;
             this.AddCarButton.Text = "Добавить машину";
             this.AddCarButton.UseVisualStyleBackColor = true;
@@ -275,15 +290,16 @@
             this.ViewPanel.TabIndex = 6;
             this.ViewPanel.Resize += new System.EventHandler(this.ViewPanel_Resize);
             // 
-            // CompareButton
+            // FeedbackButton
             // 
-            this.CompareButton.Location = new System.Drawing.Point(800, 12);
-            this.CompareButton.Name = "CompareButton";
-            this.CompareButton.Size = new System.Drawing.Size(174, 34);
-            this.CompareButton.TabIndex = 9;
-            this.CompareButton.Text = "К сравнению";
-            this.CompareButton.UseVisualStyleBackColor = true;
-            this.CompareButton.Click += new System.EventHandler(this.CompareButton_Click);
+            this.FeedbackButton.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FeedbackButton.Location = new System.Drawing.Point(938, 12);
+            this.FeedbackButton.Name = "FeedbackButton";
+            this.FeedbackButton.Size = new System.Drawing.Size(132, 38);
+            this.FeedbackButton.TabIndex = 10;
+            this.FeedbackButton.Text = "Обратная связь";
+            this.FeedbackButton.UseVisualStyleBackColor = true;
+            this.FeedbackButton.Click += new System.EventHandler(this.FeedbackButton_Click);
             // 
             // MainForm
             // 
@@ -331,6 +347,7 @@
         private System.Windows.Forms.Button AddCarButton;
         private System.Windows.Forms.Button DelCarButton;
         private System.Windows.Forms.Button CompareButton;
+        private System.Windows.Forms.Button FeedbackButton;
     }
 }
 

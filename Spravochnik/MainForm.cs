@@ -53,6 +53,8 @@ namespace Spravochnik
             HelloLabel.Visible = false;
             AddCarButton.Visible = false;
             DelCarButton.Visible = false;
+            CompareButton.Visible = false;
+            FeedbackButton.Visible = false;
 
         }
 
@@ -230,6 +232,8 @@ namespace Spravochnik
                 AuthForm.isAdmin = false;
                 AddCarButton.Visible = AuthForm.isAdmin;
                 DelCarButton.Visible = AuthForm.isAdmin;
+                CompareButton.Visible = false;
+                FeedbackButton.Visible = false;
             }
             else
             {
@@ -239,6 +243,8 @@ namespace Spravochnik
                 RegButton.Visible = false;
                 AddCarButton.Visible = AuthForm.isAdmin;
                 DelCarButton.Visible = AuthForm.isAdmin;
+                CompareButton.Visible = true;
+                FeedbackButton.Visible = true;
             }
         }
 
@@ -267,6 +273,12 @@ namespace Spravochnik
         {
             CompareForm compare = new CompareForm();
             compare.ShowDialog();
+        }
+
+        private void FeedbackButton_Click(object sender, EventArgs e)
+        {
+            FeedbackForm feedback = new FeedbackForm();
+            feedback.ShowDialog();
         }
     }
 }
