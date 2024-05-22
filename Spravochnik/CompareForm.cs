@@ -23,6 +23,7 @@ namespace Spravochnik
         void ReDraw()
         {
             Controls.Clear();
+            Controls.Add(EmaiButton);
 
             int x = 30;
             int y = 30;
@@ -120,6 +121,12 @@ namespace Spravochnik
             }
             myCars_list = myCars_list1;
             ReDraw();
+        }
+
+        private void EmaiButton_Click(object sender, EventArgs e)
+        {
+            EmailForm emailForm = new EmailForm();
+            emailForm.ShowDialog();
         }
     }
 }

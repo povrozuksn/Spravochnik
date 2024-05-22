@@ -28,7 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.EmaiButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // EmaiButton
+            // 
+            this.EmaiButton.Location = new System.Drawing.Point(1011, 15);
+            this.EmaiButton.Name = "EmaiButton";
+            this.EmaiButton.Size = new System.Drawing.Size(202, 40);
+            this.EmaiButton.TabIndex = 0;
+            this.EmaiButton.Text = "Отправить на Email";
+            this.EmaiButton.UseVisualStyleBackColor = true;
+            this.EmaiButton.Click += new System.EventHandler(this.EmaiButton_Click);
             // 
             // CompareForm
             // 
@@ -36,6 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1226, 693);
+            this.Controls.Add(this.EmaiButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CompareForm";
@@ -45,5 +57,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button EmaiButton;
     }
 }

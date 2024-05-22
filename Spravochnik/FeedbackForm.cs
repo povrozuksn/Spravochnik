@@ -27,11 +27,23 @@ namespace Spravochnik
 
             using (MailMessage message = new MailMessage(from, to))
 
-            using (SmtpClient smpt = new SmtpClient())
+            using (SmtpClient smtp = new SmtpClient())
             {
+                message.Subject = TopicСomboBox.Text;
+                message.Body = textBox1.Text;
+                message.IsBodyHtml = true;
 
-
+                smtp.Host = "smtp.mail.ru";
+                smtp.Port = 587;
+                smtp.EnableSsl = true;
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential(from.Address, "i9fPDuZtXYHPi7A6pvLW");
+                
+                smtp.Send(message);
             }
+            MessageBox.Show("Письмо отправлено");
+            Close();
         }
     }
 }
